@@ -1,0 +1,136 @@
+.home {
+    background-color: #eee;
+}
+
+.header {
+    background-color: #4fb8e5;
+    display: flex;
+    align-items: center;
+    padding: 2%;
+}
+
+.header-logo {
+    height: 100%;
+    width: 30%;
+    border-radius: 10px;
+}
+
+.header-title {
+    font-size: 200%;
+    color: #fff;
+}
+
+.header-language{
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.language-button{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    border: none;
+    margin-left: 5%;
+}
+
+.language-button:focus{
+    outline: none;
+}
+
+.active{
+    background-color: #2a581f
+}
+
+.add-todo-container {
+    /* background-color: red; */
+    /* margin-top: 2%; */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.add-todo-item {
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+}
+
+.search-filter {
+    margin-top: 2%;
+    padding: 1%;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+}
+
+
+.search-hint {
+    font-size: 80%;
+    /* background-color: blue; */
+    margin: 0px;
+    padding-left: 3%;
+}
+
+.todos{
+    margin-top: 1%;
+}
+
+.my-todos-title{
+    margin-left: 2%;
+}
+
+.todo {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 1%;
+    border: 1px solid black;
+    width: 20%;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.completed{
+    background-color: #488839;
+}
+
+.completed:hover{
+    background-color: #2a581f;
+}
+
+.unCompleted{
+    background-color: #C93734;
+}
+
+.unCompleted:hover{
+    background-color: rgb(129, 38, 36);
+}
+
+.todo-checkbox {
+    background-color: blue;
+    width: 5%;
+    -ms-transform: scale(0.5);
+    /* IE */
+    -moz-transform: scale(0.5);
+    /* FF */
+    -webkit-transform: scale(0.5);
+    /* Safari and Chrome */
+    -o-transform: scale(0.5);
+    /* Opera */
+    transform: scale(0.5);
+    padding: 10px;
+}
+
+.todo-data {
+    /* background-color: green; */
+    width: 80%;
+    color: white;
+
+}
+
+.todo-data:hover {
+    text-decoration: none;
+    color: white;
+}
