@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Filter from "../Filter/Filter";
 import Logo from "../../assets/images/logo.png";
 import "./Home.css";
 
@@ -60,7 +59,6 @@ class Home extends Component {
     }
   };
 
-  
   //input add todo
   inputTodo = (field, e) => {
     let newTodo = this.state.newTodo;
@@ -69,7 +67,6 @@ class Home extends Component {
       newTodo
     });
   };
-
 
   //add todo
   addTodo = e => {
@@ -111,8 +108,6 @@ class Home extends Component {
       );
   };
 
-  
-
   render() {
     let displayedTodos = [];
     if (this.state.todos.length > 0 && this.props.language === "EN") {
@@ -122,9 +117,10 @@ class Home extends Component {
             <Row>
               {todo.completed ? (
                 <Spring
-                  from={{ opacity: 0, marginLeft: 50 }}
-                  to={{ opacity: 1, marginLeft: 0 }}
-                  config={{ duration: 200 }}
+                  from={{ opacity: 0, transition: "opacity .5s ease" }}
+                  to={{ opacity: 1, transition: "opacity .5s ease" }}
+                  leave={{ opacity: 0, transition: "opacity 2s ease" }}
+                  config={{ duration: 500 }}
                 >
                   {props => (
                     <Col xs={12} className="todo completed" style={props}>
@@ -153,9 +149,10 @@ class Home extends Component {
                 </Spring>
               ) : (
                 <Spring
-                  from={{ opacity: 0, marginRight: 50 }}
-                  to={{ opacity: 1, marginRight: 0 }}
-                  config={{ duration: 200 }}
+                  from={{ opacity: 0, transition: "opacity .5s ease" }}
+                  to={{ opacity: 1, transition: "opacity .5s ease" }}
+                  leave={{ opacity: 0, transition: "opacity 2s ease" }}
+                  config={{ duration: 500 }}
                 >
                   {props => (
                     <Col xs={12} className="todo unCompleted" style={props}>
@@ -192,9 +189,10 @@ class Home extends Component {
             <Row>
               {todo.completed ? (
                 <Spring
-                  from={{ opacity: 0, marginLeft: 50 }}
-                  to={{ opacity: 1, marginLeft: 0 }}
-                  config={{ duration: 200 }}
+                  config={{ duration: 500 }}
+                  from={{ opacity: 0, transition: "opacity .5s ease" }}
+                  to={{ opacity: 1, transition: "opacity .5s ease" }}
+                  leave={{ opacity: 0, transition: "opacity 2s ease" }}
                 >
                   {props => (
                     <Col xs={12} className="todo completed" style={props}>
@@ -222,9 +220,10 @@ class Home extends Component {
                 </Spring>
               ) : (
                 <Spring
-                  from={{ opacity: 0, marginRight: 50 }}
-                  to={{ opacity: 1, marginRight: 0 }}
-                  config={{ duration: 200 }}
+                  from={{ opacity: 0, transition: "opacity .5s ease" }}
+                  to={{ opacity: 1, transition: "opacity .5s ease" }}
+                  leave={{ opacity: 0, transition: "opacity 2s ease" }}
+                  config={{ duration: 500 }}
                 >
                   {props => (
                     <Col xs={12} className="todo unCompleted" style={props}>
@@ -322,9 +321,7 @@ class Home extends Component {
                 </Col>
               </Row>
             </Col>
-            <Col xs={7}>
-              <Filter />
-            </Col>
+            <Col xs={7}></Col>
           </Row>
         </div>
         <Container>
@@ -405,9 +402,7 @@ class Home extends Component {
 
         <div className="search-filter">
           <Row className="search-container">
-            <Col xs={7}>
-              <Filter />
-            </Col>
+            <Col xs={7}></Col>
             <Col xs={5}>
               <Row>
                 <Col xs={12}>

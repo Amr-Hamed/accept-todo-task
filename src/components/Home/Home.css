@@ -108,6 +108,10 @@
     background-color: rgb(129, 38, 36);
 }
 
+.todo .form-control{
+    width: 5% !important;
+}
+
 .todo-checkbox {
     background-color: blue;
     width: 5%;
