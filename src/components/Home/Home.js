@@ -99,11 +99,11 @@ class Home extends Component {
       .then(
         response => {
           if (response.status === 200) {
-            alert("New Todo Request sent succesfully!");
+            console.log("New Todo Request sent succesfully!");
           }
         },
         error => {
-          alert(`Error : ${error}`);
+          console.log(`Error : ${error}`);
         }
       );
   };
